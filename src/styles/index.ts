@@ -13,6 +13,7 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+  background-color: #d6d6d6;
 `
 
 export default EstiloGlobal

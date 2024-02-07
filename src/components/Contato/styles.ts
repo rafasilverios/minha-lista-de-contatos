@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Card = styled.div`
   background-color: #fcfcfc;
@@ -60,7 +61,14 @@ export const Botao = styled.button`
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: #2f3640;
+  background-color: ${variaveis.azul};
   border-radius: 8px;
   margin-right: 8px;
+`
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
+`
+export const BotaoCancelarRemover = styled(Botao)`
+  background-color: ${variaveis.vermelho};
 `

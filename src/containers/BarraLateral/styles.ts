@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #eee;
+  background-color: #16192c;
   min-height: 100vh;
 `
 
@@ -19,6 +19,6 @@ export const Campo = styled.input`
   border-radius: 8px;
   font-weight: bold;
   color: #666;
-  border-color: #666;
+  border-color: #16192c;
   width: 100%;
 `
