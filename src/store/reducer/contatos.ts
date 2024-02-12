@@ -11,19 +11,19 @@ const initialState: ContatosState = {
       id: 1,
       nome: 'Rafael Silverio',
       email: 'rafael@rafael.com.br',
-      telefone: 41999999999
+      telefone: '(41) 99999-9999'
     },
     {
       id: 2,
       nome: 'Monik Suszek',
       email: 'monik@monik.com.br',
-      telefone: 41888888888
+      telefone: '(41) 88888-8888'
     },
     {
       id: 3,
       nome: 'Jodué Suszek Silverio',
       email: 'josue@josue.com.br',
-      telefone: 41777777777
+      telefone: '(41) 77777-7777'
     }
   ]
 }
@@ -36,10 +36,19 @@ const contatosSlice = createSlice({
       state.itens = state.itens.filter(
         (contato) => contato.id !== action.payload
       )
+    },
+    editar: (state, action: PayloadAction<Contato>) => {
+      const indexDoContato = state.itens.findIndex(
+        (t) => t.id === action.payload.id
+      )
+
+      if (indexDoContato >= 0) {
+        state.itens[indexDoContato] = action.payload
+      }
     }
   }
 })
 
-export const { remover } = contatosSlice.actions
+export const { remover, editar } = contatosSlice.actions
 
 export default contatosSlice.reducer
