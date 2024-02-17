@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 import Contato from '../../components/Contato'
-import { Container, ResultadoPesquisa } from './styles'
+import { MainContainer, Titulo } from '../../styles'
 import { RootReducer } from '../../store'
 
 const ListaDeContatos = () => {
@@ -15,8 +15,8 @@ const ListaDeContatos = () => {
   }
 
   return (
-    <Container>
-      <ResultadoPesquisa>
+    <MainContainer>
+      <Titulo>
         <h2>Lista de Contatos</h2>
         <p>
           Você está pesquisando por:{' '}
@@ -24,7 +24,7 @@ const ListaDeContatos = () => {
             {termo !== undefined && termo.length > 0 ? `"${termo}"` : ''}
           </span>
         </p>
-      </ResultadoPesquisa>
+      </Titulo>
       <ul>
         {filtraContatos().map((t) => (
           <li key={t.nome}>
@@ -37,7 +37,7 @@ const ListaDeContatos = () => {
           </li>
         ))}
       </ul>
-    </Container>
+    </MainContainer>
   )
 }
 

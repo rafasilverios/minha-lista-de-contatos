@@ -1,9 +1,9 @@
 export default {
-  vermelho: '#ee6445',
-  verde: '#2fd36e',
-  azul: '#16192c',
-  laranja: '#ee7752',
-  rosa: '#e73c7e',
-  azulClaro: '#23a6d5',
-  verdeClaro: '#23d5ab'
+  corTexto: '#695B51',
+  corAside: '#e7faff',
+  corContainer: '#fdffe7',
+  corContorno: '#bdbdbd',
+  corTextArea: '#8b8b8b',
+  vermelho: '#FF7850',
+  verde: '#bbc900'
 }

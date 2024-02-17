@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
+import { Botao } from '../../styles'
 
 export const Card = styled.div`
-  background-color: #fcfcfc;
+  background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 16px;
+  padding: 32px;
   margin-bottom: 32px;
   border-radius: 16px;
+  border: 0.1px solid ${variaveis.corContorno};
 `
 
 export const Nome = styled.h3`
@@ -28,25 +30,37 @@ export const TituloTextarea = styled.h5`
 `
 
 export const Email = styled.textarea`
-  color: #8b8b8b;
+  color: ${variaveis.corTextArea};
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
   display: block;
   width: 100%;
   resize: none;
   border: none;
+  border-radius: 4px;
   background-color: transparent;
+
+  &:focus {
+    border-color: ${variaveis.corContorno};
+    outline: 2px solid ${variaveis.corContorno};
+  }
 `
 
 export const Telefone = styled.textarea`
-  color: #8b8b8b;
+  color: ${variaveis.corTextArea};
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
   display: block;
   width: 100%;
   resize: none;
   border: none;
+  border-radius: 4px;
   background-color: transparent;
+
+  &:focus {
+    border-color: ${variaveis.corContorno};
+    outline: 2px solid ${variaveis.corContorno};
+  }
 `
 
 export const BarraAcoes = styled.div`
@@ -54,21 +68,8 @@ export const BarraAcoes = styled.div`
   padding-top: 16px;
 `
 
-export const Botao = styled.button`
-  font-weight: bold;
-  font-size: 12px;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  background-color: ${variaveis.azul};
-  border-radius: 8px;
-  margin-right: 8px;
-`
-
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`
 export const BotaoCancelarRemover = styled(Botao)`
+  padding: 12px;
+  letter-spacing: 1.1px;
   background-color: ${variaveis.vermelho};
 `
